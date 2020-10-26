@@ -5,7 +5,6 @@
 
 ####Question 1-----
 x <- as.numeric(readline("What is the value of x?"))
-# x <- -5
 if(x == 0){
   cat(paste(x,"is zero"))
 } else if(x < 0 ){
@@ -42,9 +41,6 @@ x <- as.numeric(readline("What is x?:"))
 y <- as.numeric(readline("What is y?:"))
 z <- as.numeric(readline("What is z?:"))
 # [[1 2][1 3][2 3]]
-# x <- 5
-# y <- 10
-# z <- 15
 
 if(x > y){
   x = x + y
@@ -91,6 +87,4 @@ cat(result)
 
 ####Question 4.3-----
 userinp = readline("What days do you want master?:")
-cat(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", 
-              userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday",
-              userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
+cat(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
