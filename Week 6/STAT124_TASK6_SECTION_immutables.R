@@ -4,8 +4,8 @@
 # Ignacio, Marc Shervin
 
 ####Question 1-----
-#x <- as.numeric(readline("What is the value of x?"))
-x <- -5
+x <- as.numeric(readline("What is the value of x?"))
+# x <- -5
 if(x == 0){
   cat(paste(x,"is zero"))
 } else if(x < 0 ){
@@ -38,13 +38,13 @@ if(discriminant < 0){
 
 
 ####Question 3-----
-# x <- as.numeric(readline("What is x?:"))
-# y <- as.numeric(readline("What is y?:"))
-# z <- as.numeric(readline("What is z?:"))
-#[[1 2][1 3][2 3]]
-x <- 5
-y <- 10
-z <- 15
+x <- as.numeric(readline("What is x?:"))
+y <- as.numeric(readline("What is y?:"))
+z <- as.numeric(readline("What is z?:"))
+# [[1 2][1 3][2 3]]
+# x <- 5
+# y <- 10
+# z <- 15
 
 if(x > y){
   x = x + y
