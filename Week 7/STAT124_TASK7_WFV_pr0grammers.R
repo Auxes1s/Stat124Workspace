@@ -5,10 +5,10 @@
 
 
 #Queston 1 -----
-container = 1:50
+given_sequence = 1:50
 
 #ELSEIF Statements check if a number satisfies the conditions for BEEP or BOOP or BEEPBOOP
-for(i in container){
+for(i in given_sequence){
   if((i %% 2 == 0)& (i %% 3 != 0)){
     cat("Beep\n")
   }else if ((i %% 3 == 0)& (i %% 2 != 0)){
@@ -25,11 +25,11 @@ for(i in container){
 
 #userinp = readline("How many asterisks do you want master?:")
 userinp = 6
-
 #creates ascending sequence from 1 to the nth term.
 ascending = seq(as.integer(userinp)) 
 #creates descending sequence from nth term integers to 1.
 descending = seq(as.integer(userinp), by = -1)[-1]
+
 for(i in ascending){
   cat(rep("*",i))
   cat("\n")
