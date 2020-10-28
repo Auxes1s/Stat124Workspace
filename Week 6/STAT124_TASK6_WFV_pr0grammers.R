@@ -28,7 +28,7 @@ if(discriminant < 0){
   cat("There is no real root")
 }else if(discriminant ==0){
   Root = (-b)/(2*a)
-  cat(round(Root,4))
+  cat("There is only one real root:", round(Root,4))
 }else{
   num1 = -b + sqrt(discriminant)
   num2 = -b - sqrt(discriminant)
@@ -44,10 +44,11 @@ if(discriminant < 0){
 # x <- as.numeric(readline("What is x?:"))
 # y <- as.numeric(readline("What is y?:"))
 # z <- as.numeric(readline("What is z?:"))
-# # [[1 2][1 3][2 3]]
-x = 5
-y = 10
-z = 15
+# [[1 2][1 3][2 3]]
+
+x = 15
+y = 5
+z = 10
 
 if(x > y){
   x = x + y
@@ -64,11 +65,12 @@ if(y > z){
   y = z - y
   z = z - y
 }
+
 message("The largest number is ", z)
 
 ####Question 4.1-----
 #readline function
-#serinp = as.numeric(readline("What days do you want master?:"))
+#userinp = as.numeric(readline("What days do you want master?:"))
 userinp = 3L
 if(userinp == 1){
   message("Sunday")
