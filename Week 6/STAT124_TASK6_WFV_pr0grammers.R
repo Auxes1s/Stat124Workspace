@@ -4,20 +4,24 @@
 # Ignacio, Marc Shervin
 
 ####Question 1-----
-x <- as.numeric(readline("What is the value of x?"))
+#x <- as.numeric(readline("What is the value of x?"))
+x = -5
 if(x == 0){
-  cat(x,"is zero")
+  message(x," is zero")
 } else if(x < 0 ){
-  cat(x,"is negative")
+  message(x," is negative")
 } else{
-  cat(x,"is positive")
+  message(x," is positive")
 }
 
 
 ####Question 2-----
-a <- as.numeric(readline("What is a:"))
-b <- as.numeric(readline("What is b:"))
-c <- as.numeric(readline("What is c:"))
+# a <- as.numeric(readline("What is a:"))
+# b <- as.numeric(readline("What is b:"))
+# c <- as.numeric(readline("What is c:"))
+a = 1
+b = 5
+c = 1
 
 discriminant = (b^2 - (4*a*c))
 if(discriminant < 0){
@@ -31,16 +35,19 @@ if(discriminant < 0){
   denom = 2*a
   Root1 = num1 / denom
   Root2 = num2 / denom
-  cat("The roots are", round(Root1,4),"and", round(Root2,4))
+  message("The roots are ", round(Root1,4)," and ", round(Root2,4))
   
 }
 
 
 ####Question 3-----
-x <- as.numeric(readline("What is x?:"))
-y <- as.numeric(readline("What is y?:"))
-z <- as.numeric(readline("What is z?:"))
-# [[1 2][1 3][2 3]]
+# x <- as.numeric(readline("What is x?:"))
+# y <- as.numeric(readline("What is y?:"))
+# z <- as.numeric(readline("What is z?:"))
+# # [[1 2][1 3][2 3]]
+x = 5
+y = 10
+z = 15
 
 if(x > y){
   x = x + y
@@ -57,41 +64,39 @@ if(y > z){
   y = z - y
   z = z - y
 }
-cat("The largest number is", z)
+message("The largest number is ", z)
 
 ####Question 4.1-----
-userinp = as.numeric(readline("What days do you want master?:"))
-#If you want to intialize an integer variable use this:
-#userinp = 3L
+#readline function
+#serinp = as.numeric(readline("What days do you want master?:"))
+userinp = 3L
 if(userinp == 1){
-  cat("Sunday")
+  message("Sunday")
 }else if(userinp ==2){
-  cat("Monday")
+  message("Monday")
 }else if(userinp ==3){
-  cat("Tuesday")
+  message("Tuesday")
 }else if(userinp ==4){
-  cat("Wednesday")
+  message("Wednesday")
 }else if(userinp ==5){
-  cat("Thursday")
+  message("Thursday")
 }else if(userinp ==6){
-  cat("Friday")
+  message("Friday")
 }else if(userinp ==7){
-  cat("Saturday")
+  message("Saturday")
 }else {
-  cat("Invalid INPUT!")
+  message("Invalid INPUT!")
 }
 
 
 ####Question 4.2-----
-userinp = readline("What day do you want master?:")
-#If you want to intialize an integer variable use this:
-#userinp = 3L
+#userinp = readline("What day do you want master?:")
+userinp = 3L
 result = switch(as.character(userinp),"1"="Sunday","2"="Monday", "3"="Tuesday", "4"="Wednesday","5"="Thursday","6"="Friday","7"="Saturday", stop("Invalid INPUT!"))
-cat(result)
+message(result)
 
 ####Question 4.3-----
 library("dplyr")
-userinp = readline("What days do you want master?:")
-#If you want to intialize an integer variable use this:
-#userinp = 3L
-cat(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
+#userinp = readline("What days do you want master?:")
+userinp = 3L
+message(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
