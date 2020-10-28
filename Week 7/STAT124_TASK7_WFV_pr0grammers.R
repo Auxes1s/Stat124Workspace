@@ -19,7 +19,8 @@ for(i in container){
 }
 
 #Queston 2 -----
-userinp = readline("How many asterisks do you want master?:")
+#userinp = readline("How many asterisks do you want master?:")
+userinp = 6
 for(i in seq(as.integer(userinp))){
   cat(rep("*",i))
   cat("\n")
