@@ -6,11 +6,11 @@
 ####Question 1-----
 x <- as.numeric(readline("What is the value of x?"))
 if(x == 0){
-  cat(paste(x,"is zero"))
+  cat(x,"is zero")
 } else if(x < 0 ){
-  cat(paste(x,"is negative"))
+  cat(x,"is negative")
 } else{
-  cat(paste(x,"is positive"))
+  cat(x,"is positive")
 }
 
 
@@ -31,7 +31,7 @@ if(discriminant < 0){
   denom = 2*a
   Root1 = num1 / denom
   Root2 = num2 / denom
-  cat(paste("The roots are", round(Root1,4),"and", round(Root2,4)))
+  cat("The roots are", round(Root1,4),"and", round(Root2,4))
   
 }
 
@@ -57,10 +57,12 @@ if(y > z){
   y = z - y
   z = z - y
 }
-cat(paste("The largest number is", z))
+cat("The largest number is", z)
 
 ####Question 4.1-----
 userinp = as.numeric(readline("What days do you want master?:"))
+#If you want to intialize an integer variable use this:
+#userinp = 3L
 if(userinp == 1){
   cat("Sunday")
 }else if(userinp ==2){
@@ -82,9 +84,14 @@ if(userinp == 1){
 
 ####Question 4.2-----
 userinp = readline("What day do you want master?:")
+#If you want to intialize an integer variable use this:
+#userinp = 3L
 result = switch(as.character(userinp),"1"="Sunday","2"="Monday", "3"="Tuesday", "4"="Wednesday","5"="Thursday","6"="Friday","7"="Saturday", stop("Invalid INPUT!"))
 cat(result)
 
 ####Question 4.3-----
+library("dplyr")
 userinp = readline("What days do you want master?:")
+#If you want to intialize an integer variable use this:
+#userinp = 3L
 cat(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))

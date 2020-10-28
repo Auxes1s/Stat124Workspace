@@ -1,4 +1,6 @@
 userinp = as.numeric(readline("What days do you want master?:"))
+#If you want to intialize an integer variable use this:
+#userinp = 3L
 if(userinp == 1){
   cat("Sunday")
 }else if(userinp ==2){
