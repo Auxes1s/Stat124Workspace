@@ -94,11 +94,26 @@ if(userinp == 1){
 ####Question 4.2-----
 #userinp = readline("What day do you want master?:")
 userinp = 3L
-result = switch(as.character(userinp),"1"="Sunday","2"="Monday", "3"="Tuesday", "4"="Wednesday","5"="Thursday","6"="Friday","7"="Saturday", stop("Invalid INPUT!"))
+result = switch(as.character(userinp),
+                "1"="Sunday",
+                "2"="Monday", 
+                "3"="Tuesday", 
+                "4"="Wednesday",
+                "5"="Thursday",
+                "6"="Friday",
+                "7"="Saturday", 
+                stop("Invalid INPUT!"))
 message(result)
 
 ####Question 4.3-----
 library("dplyr")
 #userinp = readline("What days do you want master?:")
 userinp = 3L
-message(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
+message(case_when(userinp == "1" ~ "Sunday",
+                  userinp =="2" ~ "Monday", 
+                  userinp == "3" ~ "Tuesday", 
+                  userinp == "4" ~ "Wednesday", 
+                  userinp =="5" ~ "Thursday", 
+                  userinp == "6" ~ "Friday", 
+                  userinp =="7" ~ "Saturday", 
+                  TRUE ~ "Invalid INPUT!"))
