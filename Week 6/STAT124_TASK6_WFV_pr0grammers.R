@@ -102,15 +102,3 @@ library("dplyr")
 #userinp = readline("What days do you want master?:")
 userinp = 3L
 message(case_when(userinp == "1" ~ "Sunday",userinp =="2" ~ "Monday", userinp == "3" ~ "Tuesday", userinp == "4" ~ "Wednesday", userinp =="5" ~ "Thursday", userinp == "6" ~ "Friday", userinp =="7" ~ "Saturday", TRUE ~ "Invalid INPUT!"))
-
-#c
-x <- 3
-Day <- case_when(x == 1 ~ "Sunday",
-                 x == 2 ~ "Monday",
-                 x == 3 ~ "Tuesday",
-                 x == 4 ~ "Wednesday",
-                 x == 5 ~ "Thursday",
-                 x == 6 ~ "Friday",
-                 x == 7 ~ "Saturday",
-                 TRUE ~ "Invalid input!")
-cat(Day)
