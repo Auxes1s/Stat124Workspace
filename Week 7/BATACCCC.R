@@ -1,4 +1,4 @@
-####BATACCCC
+####BATACCC
 
 #### Question 1 ----
 set <- 1:50
