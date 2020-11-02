@@ -1,4 +1,4 @@
-####BATACCC
+####BATACCCC
 
 #### Question 1 ----
 set <- 1:50
@@ -35,7 +35,7 @@ for (var in j){
 
 ####Question 3 ----
 #Run 1st line first
-input <- readline("say a word, master ")
+input <- readline("say a word, master: ")
 #Once the user input, run the rest of the commands
 word <- reverse_chars(input)
 message("The reverse of ", input, " is ", word,".")
