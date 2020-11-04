@@ -106,14 +106,20 @@ result = switch(as.character(userinp),
 message(result)
 
 ####Question 4.3-----
+#inp = readline("What days do you want master?:")
 library("dplyr")
-#userinp = readline("What days do you want master?:")
-userinp = 3L
-message(case_when(userinp == "1" ~ "Sunday",
-                  userinp =="2" ~ "Monday", 
-                  userinp == "3" ~ "Tuesday", 
-                  userinp == "4" ~ "Wednesday", 
-                  userinp =="5" ~ "Thursday", 
-                  userinp == "6" ~ "Friday", 
-                  userinp =="7" ~ "Saturday", 
-                  TRUE ~ "Invalid INPUT!"))
+inp <- 5L
+
+message(
+  case_when(
+    inp == 1L ~ "Sunday",
+    inp == 2L ~ "Monday",
+    inp == 3L ~ "Tuesday",
+    inp == 4L ~ "Wednesday",
+    inp == 5L ~ "Thursday",
+    inp == 6L ~ "Friday",
+    inp == 7L ~ "Saturday",
+    TRUE ~ "Invalid input"
+  )
+)
+
