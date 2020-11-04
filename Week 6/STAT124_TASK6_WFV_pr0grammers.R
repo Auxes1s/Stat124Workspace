@@ -4,7 +4,6 @@
 # Ignacio, Marc Shervin
 
 ####Question 1-----
-#x <- as.numeric(readline("What is the value of x?"))
 x = -5
 if(x == 0){
   message(x," is zero")
@@ -16,9 +15,6 @@ if(x == 0){
 
 
 ####Question 2-----
-# a <- as.numeric(readline("What is a:"))
-# b <- as.numeric(readline("What is b:"))
-# c <- as.numeric(readline("What is c:"))
 a = 1
 b = 5
 c = 1
@@ -41,9 +37,6 @@ if(discriminant < 0){
 
 
 ####Question 3-----
-# x <- as.numeric(readline("What is x?:"))
-# y <- as.numeric(readline("What is y?:"))
-# z <- as.numeric(readline("What is z?:"))
 # [[1 2][1 3][2 3]]
 
 x = 15
@@ -69,8 +62,7 @@ if(y > z){
 message("The largest number is ", z)
 
 ####Question 4.1-----
-#readline function
-#userinp = as.numeric(readline("What days do you want master?:"))
+
 userinp = 3L
 if(userinp == 1){
   message("Sunday")
@@ -92,7 +84,6 @@ if(userinp == 1){
 
 
 ####Question 4.2-----
-#userinp = readline("What day do you want master?:")
 userinp = 3L
 result = switch(as.character(userinp),
                 "1"="Sunday",
@@ -106,9 +97,8 @@ result = switch(as.character(userinp),
 message(result)
 
 ####Question 4.3-----
-#inp = readline("What days do you want master?:")
 library("dplyr")
-inp <- 5L
+inp <- 3L
 
 message(
   case_when(
