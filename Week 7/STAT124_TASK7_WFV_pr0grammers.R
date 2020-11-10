@@ -11,9 +11,9 @@ given_sequence = 1:50
 for(i in given_sequence){
   if((i %% 2 == 0)& (i %% 3 != 0)){
     cat("Beep\n")
-  }else if ((i %% 3 == 0)& (i %% 2 != 0)){
+  }else if((i %% 3 == 0)& (i %% 2 != 0)){
     cat("Boop\n")
-  }else if ((i %% 3 == 0)& (i %% 2 == 0)){
+  }else if((i %% 3 == 0)& (i %% 2 == 0)){
     cat("BeepBoop\n")
   } else {
     cat(paste(i,"\n"))
@@ -30,14 +30,15 @@ ascending = seq(as.integer(userinp))
 #creates descending sequence from nth term integers to 1.
 descending = seq(as.integer(userinp), by = -1)[-1]
 
-for(i in ascending){
+{for(i in ascending){
   cat(rep("*",i))
   cat("\n")
-}
+}; 
+  
 for(i in descending){
   cat(rep("*",i))
   cat("\n")
-}
+}}
 
 
 #Queston 3 -----
