@@ -6,7 +6,7 @@
 ####Question 1-----
 x = -5
 if(x == 0){
-  message(x," is zero")
+  message(x," is neither positive nor negative")
 } else if(x < 0 ){
   message(x," is negative")
 } else{
@@ -85,7 +85,7 @@ if(userinp == 1){
 
 ####Question 4.2-----
 userinp = 3L
-result = switch(as.character(userinp),
+day = switch(as.character(userinp),
                 "1"="Sunday",
                 "2"="Monday", 
                 "3"="Tuesday", 
@@ -94,21 +94,21 @@ result = switch(as.character(userinp),
                 "6"="Friday",
                 "7"="Saturday", 
                 stop("Invalid INPUT!"))
-message(result)
+message(day)
 
 ####Question 4.3-----
 library("dplyr")
-inp <- 3L
+userinp <- 3L
 
 message(
   case_when(
-    inp == 1L ~ "Sunday",
-    inp == 2L ~ "Monday",
-    inp == 3L ~ "Tuesday",
-    inp == 4L ~ "Wednesday",
-    inp == 5L ~ "Thursday",
-    inp == 6L ~ "Friday",
-    inp == 7L ~ "Saturday",
+    userinp == 1L ~ "Sunday",
+    userinp == 2L ~ "Monday",
+    userinp == 3L ~ "Tuesday",
+    userinp == 4L ~ "Wednesday",
+    userinp == 5L ~ "Thursday",
+    userinp == 6L ~ "Friday",
+    userinp == 7L ~ "Saturday",
     TRUE ~ "Invalid input"
   )
 )
