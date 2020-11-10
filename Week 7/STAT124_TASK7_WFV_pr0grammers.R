@@ -41,16 +41,15 @@ for(i in descending){
 }}
 
 
-#Queston 3 -----
-#Takes user input
-userinp = readline("What do you want to reverse master?:")
-#Splits user input of string into a list of the characters
-splitted = strsplit(userinp, split = "")
-#Creates a sequence of descending integers for indexing
-rev = nchar(userinp):1
-#Uses the created sequence and indexes splitted
-reversed_chars = splitted[[1]][rev]
-#Joins the list of characters into one string
-reversed_chars = paste(reversed_chars, collapse = "")
+#Question 3 -----
+#Takes input from user
+userinp = readline("What do you want to reverse master?")
+#Initiate descending sequence and container for indexing the input string
+descending = nchar(userinp):1
+reversed_chars = NULL
+#Loop for getting the reverse sequence
+for(i in descending){
+  reversed_chars = c(reversed_chars,substr(userinp, i, i))
+}
 
 cat("The reverse of ",userinp," is ",reversed_chars,".", sep="")
