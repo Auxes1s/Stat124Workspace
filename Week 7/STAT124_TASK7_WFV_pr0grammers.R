@@ -43,7 +43,7 @@ for(i in descending){
 
 #Question 3 -----
 #Takes input from user
-userinp = readline("What do you want to reverse master?")
+userinp = readline("What do you want to reverse master?: ")
 #Initiate descending sequence and container for indexing the input string
 descending = nchar(userinp):1
 reversed_chars = NULL
