@@ -4,8 +4,10 @@
 # Ignacio, Marc Shervin
 
 #Question 1 ----
+
 #Set seed for uniformity of answer
 set.seed(124)
+
 #Initialize variables
 X <- matrix(runif(100000),1000,100); z <- rep(0,1000)
 
@@ -28,11 +30,6 @@ print(durationC)
 message("Are they identical?", identical(z,b,c))
 
 
-
-
-
-
-
 #Question 2 ----
 #Initiate seed and given variables
 set.seed(124)
@@ -52,6 +49,7 @@ for(i in 1:n){
 #The for loop checks every element of z if it is less than zero
 #if the condition checks True for an element, then it is appended to zneg. Then adds 1 to j.
 #else, it does nothing
+
 library(dplyr)
 result = z[z<0]
 
