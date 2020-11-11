@@ -3,36 +3,39 @@
 # Batac, John Kenneth
 # Ignacio, Marc Shervin
 
-#Question 1 ----
-
-#Set seed for uniformity of answer
+#Set seed for uniformity of script
 set.seed(124)
 
+#Question 1 ----
+
 #Initialize variables
-X <- matrix(runif(100000),1000,100); z <- rep(0,1000)
+X = matrix(runif(100000),1000,100); z <- rep(0,1000)
+applyfunc = apply(X,1,sum)
+rowSumsfunc = rowSums(X)
 
 #Take the duration using the given, apply() function, and rowSums()
-durationA = system.time(for(i in 1:1000){
+duration_forloop = system.time(for(i in 1:1000){
   for(j in 1:100){
     z[i] <- z[i] + X[i,j]
   }
 })
-durationB = system.time(apply(X,1,sum))
-durationC = system.time(rowSums(X))
+
+#Duration of actually running the functions
+duration_apply = system.time(apply(X,1,sum))
+duration_rowSums = system.time(rowSums(X))
 
 #Output results
 message("For loop")
-print(durationA)
+print(duration_forloop)
 message("Using apply()")
-print(durationB)
+print(duration_apply)
 message("Using rowSums()")
-print(durationC)
-message("Are they identical?", identical(z,b,c))
+print(duration_rowSums)
+message("Question 2: Are they identical? ", identical(z,applyfunc,rowSumsfunc))
 
 
 #Question 2 ----
-#Initiate seed and given variables
-set.seed(124)
+#Initiate given variables
 n <- 100000; z <- rnorm(n)
 zneg <- 0; j <- 1
 
@@ -53,4 +56,4 @@ for(i in 1:n){
 library(dplyr)
 result = z[z<0]
 
-cat("Are they identical?", identical(zneg,result))
+cat("Question 2: Are they identical?", identical(zneg,result))
