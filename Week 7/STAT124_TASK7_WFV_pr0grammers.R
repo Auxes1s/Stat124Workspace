@@ -4,7 +4,7 @@
 # Ignacio, Marc Shervin
 
 
-#Queston 1 -----
+#Question 1 -----
 given_sequence = 1:50
 
 #ELSEIF Statements check if a number satisfies the conditions for BEEP or BOOP or BEEPBOOP
@@ -21,7 +21,7 @@ for(i in given_sequence){
 }
 
 
-#Queston 2 -----
+#Question 2 -----
 
 #userinp = readline("How many asterisks do you want master?:")
 userinp = 6
