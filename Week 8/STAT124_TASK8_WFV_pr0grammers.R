@@ -31,7 +31,7 @@ message("Using apply()")
 print(duration_apply)
 message("Using rowSums()")
 print(duration_rowSums)
-message("Question 2: Are they identical? ", identical(z,applyfunc,rowSumsfunc))
+message("Question 1: Are they identical? ", identical(z,applyfunc,rowSumsfunc))
 
 
 #Question 2 ----
