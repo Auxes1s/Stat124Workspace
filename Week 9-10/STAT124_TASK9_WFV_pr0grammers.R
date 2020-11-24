@@ -33,9 +33,10 @@ dviolence = dviolence[,-2]
 
 #Question 2A ----
 conditionA = dviolence$Relationship2 == "Others"
-dviolence[conditionA,c("SuspectAge","VictimAge")]
-
+answer_2A = dviolence[conditionA,c("SuspectAge","VictimAge")]
+answer_2A
    
 #Question 2B ----
 conditionB = dviolence$VictimAge < 18
-dviolence[conditionB,c("SuspectAge", "VictimAge", "Offense", "SexInter")]
+answer_2B = dviolence[conditionB,c("SuspectAge", "VictimAge", "Offense", "SexInter")]
+answer_2B
