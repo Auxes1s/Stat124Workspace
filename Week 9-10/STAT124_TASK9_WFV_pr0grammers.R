@@ -7,12 +7,12 @@
 #Question 1A ----
 #Please set working directory
 setwd(paste(getwd(),"/Week 9-10", sep=""))
-df = read.csv("dviolence.csv")
-df["SexInter"] = paste0(df$SuspectSex, " on ", df$VictimSex)
+dviolence = read.csv("dviolence.csv")
+dviolence["SexInter"] = paste0(dviolence$SuspectSex, " on ", dviolence$VictimSex)
 
 #Question 1B ----
-df$Relationship[df$Relationship=="Victim was Aquaintance"] = "Victim was Acquaintance"
-RelTrimmed = trimws(df$Relationship, which = "left", whitespace = "Victim was ")
+dviolence$Relationship[dviolence$Relationship=="Victim was Aquaintance"] = "Victim was Acquaintance"
+RelTrimmed = trimws(dviolence$Relationship, which = "left", whitespace = "Victim was ")
 Checker = function(x){
   if(is.element(x,c("Ex-Spouse", "Boyfriend/Girlfriend - BG", "Spouse"))){
     x = "Lover/Ex-lover"
@@ -26,16 +26,16 @@ Checker = function(x){
     x = x
   }
 }
-df$Relationship2 = as.character(lapply(RelTrimmed, Checker))
+dviolence$Relationship2 = as.character(lapply(RelTrimmed, Checker))
 
 #Question 1C ----
-df = df[,-2]
+dviolence = dviolence[,-2]
 
 #Question 2A ----
-conditionA = df$Relationship2 == "Others"
-df[conditionA,c("SuspectAge","VictimAge")]
+conditionA = dviolence$Relationship2 == "Others"
+dviolence[conditionA,c("SuspectAge","VictimAge")]
 
    
 #Question 2B ----
-conditionB = df$VictimAge < 18
-df[conditionB,c("SuspectAge", "VictimAge", "Offense", "SexInter")]
+conditionB = dviolence$VictimAge < 18
+dviolence[conditionB,c("SuspectAge", "VictimAge", "Offense", "SexInter")]
