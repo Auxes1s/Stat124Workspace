@@ -1,5 +1,5 @@
 # Members:
-# Tuyogon, Ann
+# Tuyogon, Ann Rossell
 # Batac, John Kenneth
 # Ignacio, Marc Shervin
 
