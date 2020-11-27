@@ -8,7 +8,7 @@
 #Please set working directory
 setwd(paste(getwd(),"/Week 9-10", sep=""))
 dviolence = read.csv("dviolence.csv")
-dviolence["SexInter"] = paste0(dviolence$SuspectSex, " on ", dviolence$VictimSex)
+dviolence["SexInter"] = paste(dviolence$SuspectSex, "on", dviolence$VictimSex)
 
 #Question 1B ----
 dviolence$Relationship[dviolence$Relationship=="Victim was Aquaintance"] = "Victim was Acquaintance"

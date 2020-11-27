@@ -4,14 +4,19 @@
 #Batac, John Kenneth
 
 #Question 1 ----
+setwd(paste(getwd(),"/Week 13-14",sep=""))
 df = read.csv("dviolence.csv")
 mean_SuspectAge = tapply(df$SuspectAge,df$Offense, mean)
-mean_SVictimAge = tapply(df$VictimAge,df$Offense, mean)
+mean_VictimAge = tapply(df$VictimAge,df$Offense, mean)
+{message("Mean of Suspect Age grouped by offense \n"); print(mean_SuspectAge);
+message("Mean of Victim Age grouped by offense \n") ;print(mean_VictimAge)}
 #Another way to do it
-means = aggregate(x = df, by = list(df$Offense), FUN = mean)[,c("SuspectAge","VictimAge")]
+#means = aggregate(x = df, by = list(df$Offense), FUN = mean)[,c("SuspectAge","VictimAge")]
 
-
-#NEED SHORT INTERPRETATION
+#SHORT INTERPRETATION
+#Violators of Abuse Prevention Order have the highest mean age compared to other suspects with around 44.96 years of age and their victims are around 38.875 years in age.
+#Those charged with Aggravated Domestic Assault come in second compared to other suspects with around 36.57 years of age while their victims are around the same age (36.71).
+#Those charged with Simple Domestic Assault are around 32.6 years of age while their victims are around 38.31429 years of age.
 
 #Question 2 ----
 chisqtest = function(data,alpha){
