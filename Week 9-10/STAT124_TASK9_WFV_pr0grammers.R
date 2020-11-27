@@ -1,16 +1,16 @@
-#Members:
-#Ignacio, Marc Shervin
-#Tuyogon, Ann Rossell
-#Batac, John Kenneth
+# Members:
+# Ignacio, Marc Shervin
+# Tuyogon, Ann Rossell
+# Batac, John Kenneth
 
 
-#Question 1A ----
+# Question 1A ----
 #Please set working directory
 #setwd(paste(getwd(),"/Week 9-10", sep=""))
 dviolence = read.csv("dviolence.csv")
 dviolence["SexInter"] = paste(dviolence$SuspectSex, "on", dviolence$VictimSex)
 
-#Question 1B ----
+# Question 1B ----
 dviolence$Relationship[dviolence$Relationship=="Victim was Aquaintance"] = "Victim was Acquaintance"
 RelTrimmed = gsub("Victim was ", "", dviolence[,"Relationship"])
 Checker = function(x){
@@ -28,13 +28,13 @@ Checker = function(x){
 }
 dviolence$Relationship2 = as.character(lapply(RelTrimmed, Checker))
 
-#Question 1C ----
+# Question 1C ----
 dviolence = dviolence[,-2]
 
-#Question 2A ----
+# Question 2A ----
 answer_2A =  subset(dviolence, Relationship2 == "Others",c("SuspectAge","VictimAge"))
 answer_2A
    
-#Question 2B ----
+# Question 2B ----
 answer_2B = subset(dviolence, VictimAge < 18, select = c("SuspectAge", "VictimAge", "Offense", "SexInter"))
 answer_2B
