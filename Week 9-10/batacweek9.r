@@ -4,7 +4,7 @@
 ins_cap <- read.csv("dviolence.csv")
 
 #a
-ins_cap$SexInter <- c(paste(ins_cap[,"SuspectSex"], " on ", ins_cap[,"VictimSex"]))
+ins_cap$SexInter <- c(paste(ins_cap[,"SuspectSex"], "on", ins_cap[,"VictimSex"]))
 
 #b
 #To remove the words "Victim was " on the elements on "Relationship" column
@@ -24,11 +24,11 @@ Replacement = function(x)
 ins_cap$Relationship2 <- lapply(RelTrim, Replacement)
 
 #c
-ins_cap[,-2]
+ins_cap = ins_cap[,-2]
 
 ####Question 2----
 #a
-subset1 <- subset(ins_cap, Relationship2 == "Others")
+subset1 <- subset(ins_cap, Relationship2 == "Others",c('SuspectAge','VictimAge'))
 
 #b
 subset2 <- subset(ins_cap, VictimAge < 18, select = c("SuspectAge", "VictimAge", "Offense", "SexInter"))
