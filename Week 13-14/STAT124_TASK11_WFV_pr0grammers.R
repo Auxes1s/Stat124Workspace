@@ -38,10 +38,10 @@ chisqtest = function(data,alpha){
   v = (nrows - 1) * (ncols - 1)
   critval = qchisq(alpha,v,lower.tail = FALSE)
   if(ChiSquared > critval){
-    message("Since the test statistic value ", round(ChiSquared,4), " exceeds the critical value ", round(critval,4),
+    message("Since the test statistic value ", round(ChiSquared,2), " exceeds the critical value ", round(critval,2),
             " we reject the null hypothesis of independence at ", alpha*100,"% level of significance.")
   } else {
-    message("Since the test statistic value", round(ChiSquared,4)," does not exceed the critical value ", round(critval,4), 
+    message("Since the test statistic value", round(ChiSquared,2)," does not exceed the critical value ", round(critval,2), 
             " we do not reject the null hypothesis of independence at ", alpha*100,"% level of significance.")
   }
 }

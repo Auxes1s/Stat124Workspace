@@ -24,8 +24,11 @@ trianglr = function(h){
 
 #Question 2 ----
 trianglr = function(h){
+  if(h != floor(h)){
+    stop("Your input is not an integer: it should be a positive integer")
+  }
   if((h < 2) || (h > 10)){
-    stop("The function only takes integers from 2 to 10 only.")
+    stop("The function only takes integers from 2 to 10.")
   }
   #creates ascending sequence from 1 to the nth term.
   ascending = seq(as.integer(h)) 
