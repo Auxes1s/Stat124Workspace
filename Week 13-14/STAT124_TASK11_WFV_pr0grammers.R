@@ -19,30 +19,27 @@ message("Mean of Victim Age grouped by offense \n") ;print(mean_VictimAge)}
 #Those charged with Simple Domestic Assault are around 32.6 years of age while their victims are around 38.31429 years of age.
 
 #Question 2 ----
-chisqtest = function(data,alpha){
-  nrows = dim(data)[1]
-  ncols = dim(data)[2]
-  #Take Total of all Rows and All Columns
-  Row_Total = apply(data, 1, sum)
-  Col_Total = apply(data,2, sum)
-  Grand_Total = sum(Row_Total)
-  #Get Eijs
-  Eij = matrix(0,nrows,ncols)
-  ChiSquared = 0
-  for(i in 1:nrows){
-    for(j in 1:ncols){
-      Eij[i,j] = (Row_Total[i] * Col_Total[j])/Grand_Total
-      ChiSquared = ChiSquared + (((data[i,j]-Eij[i,j])^2)/Eij[i,j])
-    }
-  }
-  v = (nrows - 1) * (ncols - 1)
+#NEW VERSION CHISQTEST
+chisqtest2 = function(data,alpha){
+  Grand_Total = sum(data)
+  Row_Total = rowSums(data)
+  dim(Row_Total) = c(dim(data)[1],1)
+  Col_Total = colSums(data)
+  dim(Col_Total) = c(1,dim(data)[2])
+  Eij = (Row_Total %*% Col_Total)/Grand_Total
+  ChiSquared = sum(((data - Eij)^2)/Eij)
+  v = (dim(data)[1] - 1) * (dim(data)[2] - 1)
   critval = qchisq(alpha,v,lower.tail = FALSE)
   if(ChiSquared > critval){
     message("Since the test statistic value ", round(ChiSquared,2), " exceeds the critical value ", round(critval,2),
             " we reject the null hypothesis of independence at ", alpha*100,"% level of significance.")
   } else {
-    message("Since the test statistic value", round(ChiSquared,2)," does not exceed the critical value ", round(critval,2), 
+    message("Since the test statistic value ", round(ChiSquared,2)," does not exceed the critical value ", round(critval,2), 
             " we do not reject the null hypothesis of independence at ", alpha*100,"% level of significance.")
   }
 }
+
+
+
+
   
